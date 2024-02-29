@@ -1,4 +1,62 @@
+
+html{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
+        font-size: 22px;
+        border: 1px solid red;
+       
+
+}
+
+button, input, textarea, select {  /*these donnot inherit from html by default so we have to make it inherit*/
+        font: inherit;
+}
+/* CSS read from top to bottom */
+/* if same selectors are used then the later one will have its effect */
+/* but if you use class selector , that have more specificity than element selector it'll will overrule that and apply class selector*/
+
+/* element selector */
+
+body{
+
+
+}
+main{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 h2 {   /* it means h2 that are nested in h1*/
+        color: rgb(72, 0, 255);
+}
+
+h1 ,h2{  /* means h1 or h2*/
+        color: rgb(109, 187, 187);
+}
+
+.highlight{
+       text-transform: uppercase;
+       background-color: gold;
+}
+
+
 p{
-        font-size: 64px;
-        color: purple;
+        color:purple ;
+        /* color:purple !important;  !important makes the selector overrule other selectors even if they are class or id*/
+}
+p{
+        color: chartreuse;
+}
+/* class selector  more specific than element selector*/
+.gray{
+        color: gray;
+}
+
+
+/* id selector the most specific overules other rules usually not used */
+/* then class selector (usually used) then element selector*/
+
+/* id should be unique in html document while class can be.
+ids should not be used in inside css as it is not a good practice */
+#second{
+        font-style:italic;
 }
