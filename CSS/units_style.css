@@ -1,0 +1,57 @@
+
+/* pixels (px) are absolute unit of length  */
+/* if we use px for fonts and then user changes the appearance of fonts from browser even then our page would retain the same font size that dev. has applied  */
+
+/* so if dev. wants to a particular element with a specific size then use absolute of pixels */
+
+/* but if dev. wants to make a responsive design then use relative units like em, rem, %, vw, vh, vmin, vmax  */
+
+/* so, it is better to use relative units like em, rem, %, vw, vh, vmin, vmax  
+ */
+
+/* rem => root element(size defined in html element selector) i.e; 1 rem => font size one times of root element size, 2 rem => font size two times the root element size*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ html{  /*browsers sets it itsel of or dev. can explicitly */
+    font-size: 16px;
+}
+
+body{
+    min-height: 100vh;
+    /*  body of the page grows, as we fill it with content*/
+/* sometimes we want to use  body element have full height of the page even though there is less content on the page than the hight itself.  */
+}
+
+/* width => %, ch, vw(viewport width ) */
+/* font size => rem, em, px */
+h1{
+    border: 2px dashed red;
+    width: 50%;
+    font-size: 1rem; /* 3 times the font size of the parent element */
+    padding: 0.5em; /* 0.5 times the font size of the parent element if parent not found then font specified of itself */
+}
+main{
+    font-size:1.5rem;
+    width: 50vw; /* 50% of the viewport width */
+
+    /* when 100vw is used then a bottom scroll bar will appear & that's annoying,it's likely due to the fact that 100vw includes the width of the scrollbar itself, leading to overflow. */
+    background-color: #1db912;
+
+    /* so if p is in main tag , even then it's size will be  relative to html element size if rem is used*/
+}
+
+/* In summary, while both rem and em are relative units, rem is always relative to the root element's font-size, while em is relative to the font-size of its nearest parent or itself if no parent has a specified font-size.  */
+
+
+p{
+    font-size: em;
+    width:40ch; /* 40 times the width of the character '0' */
+
+
+    /* if we use rem then the font size will be compared to html element's font size, as rem doesn't depend on any other element */
+}
