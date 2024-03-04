@@ -1,0 +1,41 @@
+body{
+    padding : 5rem;
+    font-size: 1rem;
+
+}
+
+a{
+    text-decoration: none;
+    /* cursor: not-allowed; */ /* this will change the cursor to a circle with a line through it and doesn't allow it to click that hyperlink */
+
+    cursor: pointer; /* this will change the cursor to a hand and allow it to click that hyperlink */
+
+    color: rgb(0, 255, 255);
+    
+}
+a:visited{
+    color: #ff00ff;
+}
+
+
+a:hover,a:focus {
+    /* when we are not hovering via cursor but with tab so it also changes color. */
+    color: hsla(191, 100%, 50%, 0.5);
+    /* background-color: gold; */
+   
+    /* opacity sets the opacity of  element it is in. */
+
+}
+
+a:active{
+    color: red;
+    background-color: gold;
+}
+
+/* the correct order 
+a,
+visited,
+hover,
+active
+
+*/
