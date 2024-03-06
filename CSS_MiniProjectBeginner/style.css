@@ -1,0 +1,67 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0.5rem;
+    font-family: "roboto", sans-serif;
+    text-align: center;
+
+}
+
+nav {
+    border: 2px solid rgb(31, 31, 31);
+    border-radius: 2rem;
+    margin: 0 auto 1rem;
+    /* values 0, auto, and 1rem represent the top, left/right, and bottom  */
+    width: 600px;
+    font-size: 3rem;
+    line-height: 1.5;
+
+}
+
+h2 {
+    background-color: gold;
+    padding: 1rem;
+    border-radius: 2rem 2rem 0 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    border-top: 1px solid #00000054;
+}
+
+li a {
+    display: block;
+
+}
+
+li a:link {
+    text-decoration: none;
+
+
+}
+
+li a:visited {
+    text-decoration: none;
+    color: #333;
+
+}
+
+li a:hover,
+li a:focus {
+    /* hover and focus are pseudo-classes , focus used for keyboard focus*/
+    background-color: #333;
+    color: antiquewhite;
+    cursor:crosshair;
+}
+
+li:last-child a {  /* 5th child of li or use last-child*/
+    border-radius: 0 0 1.8rem 1.8rem;
+}
