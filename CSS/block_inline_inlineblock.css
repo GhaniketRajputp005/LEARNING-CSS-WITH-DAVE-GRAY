@@ -1,0 +1,59 @@
+body{
+    font-size: 2rem;
+    font-family: "roboto", sans-serif;
+    
+    
+}
+main{
+    background-color: lightblue;
+  
+}
+p{
+    background-color: lightcoral;
+
+}
+.opposite{
+    display: inline-block;
+    /*block makes inline elements to block level elements*/
+    /*inline makes block elements to inline level elements*/
+    /*inline-block => This value combines aspects of both block and inline. The element is treated as an inline-level element, but it allows you to set width, height, margins, and padding.*/
+
+    background-color: blue;
+    color: rgb(230, 1, 255);
+    margin: 2rem;
+    padding: 2rem;
+
+    /* width and height properties doesnot work on block level elements.
+    only left and right margins are applied
+    but padding works.*/
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+ul{
+    list-style-type: none;
+    padding:2rem;
+    text-align: center;
+    margin: 0;
+}
+
+li{
+    display: inline;
+    margin-inline:.2rem;
+   
+}
+
+li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+li a:hover,a:focus{
+    color: black;
+    background-color: white;
+    padding: 1rem;
+    
+}
