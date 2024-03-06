@@ -1,0 +1,44 @@
+body{
+    font-family: "roboto", sans-serif;
+    font-size: 1.5em;
+}
+
+.block{
+    width: 20vw;
+    height: 20vw;
+    background-color: #000000;
+    color: aliceblue;
+    padding: 1rem;
+    margin-left: 5px;
+}
+
+/* Float makes the  any element floating left/right  and the text wraps around it*/
+
+/* otoh clear makes text not wrap around floating element by moving text below to floating element */
+
+.left{
+    float: left; /*float makes the element flaot over the container, in this case a div floats over paragraph, like in newspaper text wraps images, floats the container to the left*/
+    margin-right: 20px;  /*to create gap b/w div and text we need to use margin of the element floated rather than margin of the para*/
+}
+.right{
+    float: right;
+    margin-left: 20px;
+}
+
+.clear{
+    clear: both;
+    /* This CSS property is used to specify whether an element should be moved below (cleared) the floating elements that precede it on both sides (left and right). It prevents the element from wrapping around the floated elements. */
+
+    /* This is often used when dealing with floated elements inside a container, and you want to make sure subsequent content is not affected by the floating elements. Applying this class to an element will ensure that it starts on a new line, clearing any floated elements above it. */
+    
+}
+
+section{
+    background-color: bisque;
+    border: 2px solid #444;
+    /* overflow: auto; traditional way to get the container element to extend all the way down to contain the float */
+
+    display: flow-root;   /*MDN way  modern*/
+
+    /*it allows the container element to contain, floating element completely and doesn't shrink according to the size of text wraping around the floating element */
+} 
