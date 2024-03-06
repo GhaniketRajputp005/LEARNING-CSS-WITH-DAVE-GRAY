@@ -1,0 +1,41 @@
+
+body{
+    padding: 5%;
+    font-size: 1rem ;
+    font-family: "Roboto",sans-serif;
+}
+
+ol{
+    list-style-type: lower-alpha;  /* lower-alpha, upper-alpha, lower-roman, upper-roman, decimal */
+
+    list-style-type: upper-alpha; /* lower-alpha, upper-alpha, lower-roman, upper-roman, decimal */
+
+    /* list-style-type: circle;  */  /* disc, circle, square */
+
+    /* list-style-type: none;  remove the default bullet points or numbers that appear before list items */
+}
+
+ul{
+    list-style-type: square;  /* disc, circle, square */
+    text-align: center; /* left, right, center, justify */
+    list-style-position: inside; /* outside(bullets stays on left corner), inside(bullets stays with text) */
+    color: blue;
+    line-height: 1.6;
+    /* list-style-image: url('https://media.geeksforgeeks.org/gfg-gg-logo.svg'); */
+
+    /* list-style: square url('https://media.geeksforgeeks.org/gfg-gg-logo.svg') inside; shorthand property incase image fails to load, then squares appears */
+}
+
+ul li:nth-child(odd){  /* even, odd, 3n+1, 3n+2, 3n+3 */
+    color : red;
+}
+
+/*pseudo class starts with :*/
+/*pseudo element starts with ::*/
+
+ul ::marker{  /* to style the bullet points */
+    color: rgb(255, 0, 0);
+    font-family:fantasy ;
+    font-size: 1em;
+    content :"$10>> ";  /* to add content before the bullet points */
+}
