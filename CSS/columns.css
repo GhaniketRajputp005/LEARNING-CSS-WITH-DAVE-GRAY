@@ -1,0 +1,53 @@
+body{
+    font-family: 'roboto', sans-serif;
+    background-color: #f4f4f4;
+    font-size: 1.3rem;
+    
+}
+
+
+.columns{
+
+    /* column-count:4;
+    
+    4 columns inside section every para became a column */
+
+
+    /* column-width: 250px;
+    
+    width of each column is fixed, now the browser maintains the width of each column, and arranges them according to screen size. */
+
+    columns: 4 250px; /* shorthand for column-count and column-width */
+
+    column-rule: solid 3px #333;
+    column-gap: 3rem;
+}
+
+.columns p{
+    margin-top: 0px;
+}
+
+.columns h2{
+    margin-top: 0px;
+    color: white;
+    background-color: #333;
+    padding: 1rem;
+
+    break-inside: avoid; /* to avoid heading to be split into two columns */
+
+    break-before: column ; /* to start heading in new column */
+}
+
+.columns .quote{
+    margin-top: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    column-span: all;
+   
+}
+
+.nowrap{
+    white-space: nowrap;
+    /* to avoid text to be wrapped */
+}
