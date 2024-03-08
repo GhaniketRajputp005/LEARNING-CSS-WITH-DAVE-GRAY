@@ -22,7 +22,7 @@ body{
     justify-content: space-around; /*or (space-between) or (space-evenly) */
     /*or (flex-start,flex-end,center) defines alignment along main axis  */
 
-    align-items: center; /*or (flex-start,flex-start,center,stretch) defines alignment along cross axis */
+    align-items: center; /*or (flex-start,flex-start,center,stretch) defines alignment along cross axis as a whole content */
 
     align-content: space-evenly; /*or (space-between, space-around, stretch) defines alignment along cross axis when there are multiple lines of content */
 
