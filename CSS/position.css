@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    min-height: 300vh;
+}
+.Outer-container{
+    border:3px dashed #fbc5c5;
+    width: 75vw;
+    height: 100vh;
+    margin: 40px auto;
+    position: relative;
+}
+.inner-container{
+    border:2px solid #a40000;
+    width: 40vw;
+    height: 50vh;
+    margin: 200px auto   ;
+    /* position: relative; */
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    color: rgb(255, 255, 255);
+    padding: 2rem;
+    
+}
+
+ /* position: static; 
+    background-color: #ff0202;
+    position: static;
+    top: 50px;
+    left: 0;
+
+    /* top,left,bottom,right,z-index has no effect */
+    /*by default all elements have static position */
+     /* relative, absolute, fixed, sticky */ 
+
+.absolute{
+   
+
+     position: absolute; 
+     top:100px;/*100px from the top of the nearest parent with relative position */
+     left: 0px;  /*50px from the left of the nearest parent with relative position */
+
+     /* top,left,bottom,right,z-index has effect */
+     /*absolute position is relative to the nearest parent with relative position */
+     /*if no parent with relative position then it is relative to the body */
+
+     /*outer container is set to relative & inner container  is set 
+    to relative so the box is relative to the inner container */
+    
+     background-color: #0056e0;
+    z-index: 1;
+     
+    /* visibility: hidden;  <!-- it will hide the element but it will still take up space --> */
+
+    /* display: none; <!-- it will hide the element and it will not take up space --> */
+
+    /* opacity: 0; <!-- it will hide the element and it will still take up space --> */
+
+     /* if you want to retain element but make it go out of page,set left by setting left:-1000px;  */
+}
+
+.relative{
+    position: relative;
+
+    /*it is relative to it's parent w/o parent have to be position relative , top,left,right, bottom works*/
+    
+    background-color: #ff0202;
+    top: 100px;
+    left: 50px;
+}
+
+.fixed{
+    background-color: green;
+    position: fixed;
+    top: 100px;
+    left: 200px;
+
+    /*fixed position is relative to the viewport ,top,left,right,bottom works*/
+}
+
+.sticky{
+    background-color: black;
+    position: sticky;
+
+    /*sticky position is relative to the viewport until it reaches the top of the viewport then it becomes fixed */
+    /*top set kro  viewport  jb  top pr aaye to fixed ho jaye, apne container tk jha tk uski bottom boundary h  */
+
+    /* it will act as relative within its containing element until it reaches a specified scroll position, at which point it becomes fixed to the viewport. */
+
+    top: 100px;
+    opacity: 0.5;
+}
