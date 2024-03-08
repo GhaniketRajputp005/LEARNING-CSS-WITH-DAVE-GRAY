@@ -41,7 +41,7 @@ body{
     font-size: 2rem;
     padding: .5rem;
 
-    display: flex;
+    display: flex; /*makes this flex item a flex container */
     justify-content:center ;
     align-items: center;
 
