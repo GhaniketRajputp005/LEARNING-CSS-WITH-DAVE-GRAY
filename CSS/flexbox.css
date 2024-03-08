@@ -27,6 +27,7 @@ body{
     align-content: space-evenly; /*or (space-between, space-around, stretch) defines alignment along cross axis when there are multiple lines of content */
 
     flex-direction: row; /*or (row, row-reverse, column, column-reverse) */
+    /* Notice that when the flex direction is a column, justify-content changes to the vertical and align-items to the horizontal. */
 
     flex-wrap: nowrap; /*or (wrap, wrap-reverse, nowrap) */
     
