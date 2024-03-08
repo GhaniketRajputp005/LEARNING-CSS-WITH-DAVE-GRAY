@@ -72,6 +72,10 @@ body{
     padding: .5rem;
 }
 
+
+/* 
+order: 1; order of the grid items */
+
 .box:first-child{
     background-color: #f00;
 
@@ -79,9 +83,17 @@ body{
     /* grid-column-end: 4; endds at  line 4   */
     /* span 3 columns */
 
+    /* When pairing grid-column-start and grid-column-end, you might assume that the end value has to be greater than the start value. But this turns out not the case! */
+
+    /* Instead of defining a grid item based on the start and end positions of the grid lines, you can define it based on your desired column width using the span keyword. Keep in mind that span only works with positive values.
+
+    For example, water these carrots with the rule grid-column-end: span 2, icludes starting grid   ;. */
+
     /* grid-row-start: 1;
     grid-row-end: 3; */
     /* span 2 rows */
+
+
 
     grid-column: 1 / 4;
     grid-row:1 / 3;
