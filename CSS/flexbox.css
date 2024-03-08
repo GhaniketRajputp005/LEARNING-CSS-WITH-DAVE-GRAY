@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "roboto", sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container{
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline:auto;
+    border: 1px solid #000;
+    display: flex; /*flex makes this container a flex container
+
+    /* gap: 1rem; /* gap is a shorthand for row-gap and column-gap */
+    gap: 1rem;
+    justify-content: space-around; /*or (space-between) or (space-evenly) */
+    /*or (flex-start,flex-end,center) defines alignment along main axis  */
+
+    align-items: center; /*or (flex-start,flex-start,center,stretch) defines alignment along cross axis */
+
+    align-content: space-evenly; /*or (space-between, space-around, stretch) defines alignment along cross axis when there are multiple lines of content */
+
+    flex-direction: row; /*or (row, row-reverse, column, column-reverse) */
+
+    flex-wrap: nowrap; /*or (wrap, wrap-reverse, nowrap) */
+    
+    flex-flow: row nowrap; /*shorthand for flex-direction and flex-wrap */
+}
+
+.box{
+    /* min-width: 100px; */
+    height: 100px;
+    background-color: blue;
+    font-size: 2rem;
+    padding: .5rem;
+
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+
+
+    /* flex-grow: Specifies how much a flex item should grow relative to the rest of the flex items when there is available space along the flex container's main axis.
+
+    flex-shrink: Specifies how much a flex item should shrink relative to the rest of the flex items when there is not enough space along the flex container's main axis.
+    
+    flex-basis: Specifies the initial size of a flex item before any available space is distributed. It can be a specific length, a percentage, or one of the keywords like auto. */
+
+
+    flex-basis: 200px;
+     /*initial size of the flex item before any available space is distributed.*/
+    
+    /* flex-grow: 1; 1 means the item can grow at the same rate as other flex items having same flex-grow value 1 */
+
+    flex-shrink: 1 ; /*1 means the item can shrink at the same rate as other flex items having same flex-shrink value 1 */
+
+
+    flex:1 1 100px; /*shorthand for flex-grow, flex-shrink, flex-basis */
+}
+
+.box:nth-child(2){
+    background-color: red;
+
+    /* flex-grow: 2;When you set flex-grow: 2; on a flex item, it means that the item will grow at twice the rate of other flex items with a flex-grow value of 1 in the same flex container, */
+
+    flex-shrink: 2; /*When you set flex-shrink: 2; on a flex item, it means that the item will shrink at twice the rate of other flex items with a flex-shrink value of 1 in the same flex container, */
+
+    flex: 2 2 100px; /*shorthand for flex-grow, flex-shrink, flex-basis */
+
+    order: 1; /*order property is used to change the order of the flex items. By default, all flex items have an order of 0. You can set the order to a positive(more than 0,makes the flex item shift right) or negative(less than 0 , makes it shift to left) value to change the order of the flex items. */
+}
