@@ -1,0 +1,138 @@
+/* Begin reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    /*to remove the extra space below the image due to its inline property*/
+}
+
+/* End reset */
+
+/* Utility classes */
+
+.nowrap {
+    white-space: nowrap;
+}
+
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+/* End utility classes */
+
+body {
+    font-family: "Nunito", sans-serif;
+    min-height: 100vh;
+    background-color: aliceblue;
+    /* background-image:url(../images/), linear-gradient(to  left,steelblue,red); */
+    /* linear gradient from right to left */
+
+    /*url is stacked on top of the linear gradient*/
+
+
+
+}
+
+.container {
+    /*trying to create a filter effect on the background image*/
+    background-color: rgb(251, 210, 156);
+    background-image: url(../images/469029.jpg);
+
+    /* background-size: cover; to make the image cover the entire container */
+
+    /* background-repeat: no-repeat; to prevent the image from repeating */
+
+    background-repeat: repeat;
+
+    background-position: center center;
+    /*to center the image both horizontally and vertically*/
+    background-size: cover;
+    /* background-size contain makes the image fit inside the container without losing its aspect ratio. The image will be as large as possible to fit the container, and it will be centered within the container. If the container is larger than the image, the image will have empty space around it. */
+
+}
+
+.hero {
+    border-bottom: 1px solid #000;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+
+    background-color: hsla(0, 0%, 00%, .585);
+
+    /* NOTE: TRY TO USE IMAGE  TWICE AS BIG THAT YOU ARE PLANNIG TO SHOW , SO THAT IT MAY NOT LOOSE ITS QUALITY WHEN STRETCHED */
+
+
+
+
+}
+
+.h1 {
+    font-size: 500%;
+    color: rgb(255, 223, 79);
+    text-shadow: 5PX 5px 10px #000;
+    /*horizontal offset, vertical offset, blur radius, color*/
+
+    padding: 1.25rem;
+    border-radius: 10px;
+}
+
+.profile {
+    width: 35%;
+    /* 35% of the parent container */
+}
+
+.profile img {
+    width: 100%;
+    /* 100% of the parent container */
+    height: auto;
+    min-width: 100px;
+
+    border: 5px double green;
+    border-radius: 50%;
+
+    /*this makes image responsive*/
+    /*as the width of the parent container changes, the image will change its width accordingly*/
+}
+
+
+.example {
+    margin-top: 1rem;
+    padding-left: 20px;
+    border: 1px solid #000;
+}
+
+
+
+.example img {
+    width: 50%;
+    /* 55% of the parent container */
+    height: auto;
+
+    /*this makes image responsive*/
+    /*as the width of the parent container changes, the image will change its width accordingly*/
+
+    /* When you set a percentage value for the width of an element, it is calculated based on the width of its containing block. In this case, the containing block is the parent container of the element with the class .example. */
+}
+
+.clip{
+    font-weight: 800;
+    font-size: 18rem;
+    text-align: center
+    ;
+    background-image: url(../images/607877.jpg);
+    min-height: 100vh;
+    color: white;
+    background-size: cover;
+    background-position: bottom bottom;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    color: hsla(0, 0%, 0%, 0.219);
+}
