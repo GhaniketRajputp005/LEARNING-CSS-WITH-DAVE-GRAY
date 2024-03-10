@@ -1,0 +1,162 @@
+/* ||RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ||GENERAL STYLES */
+body{
+    font: 1.5rem 'Nunito', sans-serif;
+    min-height: 100vh;
+    background-color: #475569;
+    background-image:  radial-gradient(circle, #d0dae7, #475569);
+    /* first color is the inner color and the second color is the outer color */
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/michael-dam-mEZ3PoFGs_k-unsplash.jpg);
+
+
+}
+
+header, nav, main, footer{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100vw;
+    text-align: center;
+}
+
+
+header, footer{
+    position: sticky;
+    background-color: #050290;
+    color: #d0dae7;
+}
+
+
+header{
+    top:0;
+
+}
+
+nav{
+    background-color: white;
+    color: black;
+    padding: 0.5rem;
+    border-bottom: 2px solid black;
+}
+
+main{
+    flex-grow: 1
+    ;
+}
+
+footer{
+    bottom: 0;
+
+}
+/* basic syntax of a media query: */
+
+/* @media mediatype and (condition : breakpoint) {
+    //CSS rules
+} */
+
+/* @media screen and(min-width: 481px){  
+    481px is the breakpoint, all other css rules below these pixels will be applied and beyond this will also be applied unless we overwrite them  */
+
+    /* min-width means from 481px and beyond.
+    max-width means to 480px and below.; */
+
+    /* list of breapoints:
+
+    1 - orientation: landscape; forturining prtrait t landscape mode 
+
+    2 -  min-aspect-ratio: 16/9; 
+    
+    landsacpe aspect ratio num>denom or 7/4
+    when we are using min-aspect-ratio, we are saying that the aspect ratio of the viewport must be at least 16:9. If the aspect ratio is less than 16:9, the styles inside the media query will not be applied. */
+
+
+
+
+/* we use the @media rule to apply different styles for different devices. In this case, we are using the screen media type, which is used for computer screens, tablets, smart-phones, etc. The min-width property is used to set the minimum width of the viewport, which is the area of the browser where web content is displayed. */
+
+/* we go for min-width as to follow mobile-first approach. */
+
+
+/* || SMALL */
+
+@media screen and (min-width:576px){
+    body{
+        background-color: greenyellow;
+        background-image: radial-gradient(circle, #d0dae7, greenyellow);
+        background-image: url(../images/michael-dam-mEZ3PoFGs_k-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    }
+    nav{
+        display: none;
+    }
+}
+
+/* ||MEDIUM */
+
+@media screen and (min-width:776px){
+    body{
+        background-color: rgb(177, 132, 27);
+        background-image: radial-gradient(circle, #d0dae7, rgb(252, 255, 47));
+        background-image: url(../images/michael-dam-mEZ3PoFGs_k-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+   
+}
+
+
+/* ||LARGE */
+@media screen and (min-width:976px){
+    body{
+        background-color: rgb(213, 47, 255);
+        background-image: radial-gradient(circle, #d0dae7, rgb(193, 43, 223));
+        background-image: url(../images/michael-dam-mEZ3PoFGs_k-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:initial;
+    }
+    
+}
+
+/* ||EXTRA LARGE */
+@media screen and (min-width:1276px){
+    body{
+        background-color: firebrick;
+        background-image: radial-gradient(circle, #d0dae7, firebrick);
+        background-image: url(../images/michael-dam-mEZ3PoFGs_k-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:unset;
+    }
+    nav{
+        display:initial;
+    }
+}
+
+/* || MOBILE DEVICE LANDSCAPE MODE */
+@media screen and (max-height:425px) and (min-aspect-ratio: 7/4){
+    body{
+        background-color: dodgerblue;
+        background-image: radial-gradient(circle, #d0dae7, dodgerblue);
+        background-image: url(../images/michael-dam-mEZ3PoFGs_k-unsplash.jpg);
+    }
+
+    h1,h2{
+        font-size: 1.5rem;
+
+    }
+    
+    nav{
+        display: none;
+    }
+}
