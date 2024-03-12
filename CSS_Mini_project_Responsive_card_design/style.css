@@ -1,6 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 
+Pseudo-selectors---> two types
+
+1.psuedo-classes
+ are used to define the special state of an element. e.g: hover, focus, active, etc of anchor element.
+ a:hover, a:visited, a:active, a:focus, etc.
+ colon is used to define pseudo-classes.
+
+2.psuedo-elements
+are used to style a specific part of an element. e.g: first-line, first-letter, before, after, etc.
+double colon is used to define pseudo-elements.
+
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -64,13 +77,21 @@ nav {
     justify-content: space-evenly;
 }
 
-nav a, nav a:visited {
+/* nav a, nav a:visited {
+    color: #000;
+  
+} */
+nav a:any-link{ /*The :any-link CSS pseudo-class matches any element that acts as the source anchor of a hyperlink. */
     color: #000;
   
 }
 
-nav a:hover, nav a:focus{
+nav :is(a:hover,a:focus){ /*The :is() CSS pseudo-class function takes a selector list as its argument and selects any element that can be selected by one of the selectors in that list. */
     color:rgb(161, 199, 65);
+}
+
+nav a:active{  /*Descendant selector*/
+    color: red;
 }
 
 main {
@@ -102,6 +123,10 @@ footer {
 
 }
 
+.card:target{ /*The :target CSS pseudo-class represents a unique element (the target element) with an id matching the URL's fragment. */
+    border: 2px solid #bd2fda;
+}
+
 .card figure{
     display: flex;
     flex-flow: column nowrap;
@@ -113,6 +138,20 @@ footer {
 
 }
 
+/* /* .card img[alt]{
+    /* selects an image with an alt attribute. 
+    border: 10px solid #ff6363;
+  */
+.card img :not([alt]){
+    /* selects an image without an alt attribute. */
+    border: 10px solid #ff6363;
+}
+
+.card:nth-child(even){ /*The :nth-child() CSS pseudo-class matches elements based on their position in a group of siblings. selects the 2 card itlsef*/
+/* /depends on the position of cards in html only */
+    background-color: papayawhip;
+}
+
 .card figcaption{
     text-align: center;
     margin: 1rem;
@@ -120,6 +159,18 @@ footer {
     font-weight: bolder;
 }
 
+
+.card figcaption::after{
+    /* The ::after pseudo-element is used to add a virtual element to the selected element. 
+    yes it is virtual element and cant be selected by mouse pointer */
+    content: '🫦';
+    display: block;
+}
+
+.card figcaption::first-letter{
+    font-size: 3rem;
+    color: #bd2fda;
+}
 
 /* || SMALL */
 @media screen and (min-width: 576px) {
