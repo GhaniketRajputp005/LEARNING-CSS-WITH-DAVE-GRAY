@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 
-Pseudo-selectors---> two types
+/* Pseudo-selectors---> two types
 
 1.psuedo-classes
  are used to define the special state of an element. e.g: hover, focus, active, etc of anchor element.
@@ -10,7 +10,7 @@ Pseudo-selectors---> two types
 
 2.psuedo-elements
 are used to style a specific part of an element. e.g: first-line, first-letter, before, after, etc.
-double colon is used to define pseudo-elements.
+double colon is used to define pseudo-elements. */
 
 
 
@@ -82,11 +82,16 @@ nav {
   
 } */
 nav a:any-link{ /*The :any-link CSS pseudo-class matches any element that acts as the source anchor of a hyperlink. */
+
+    /* So, the nav a:any-link selector is targeting any hyperlink within a <nav> element. It will select not only traditional anchor links (<a>), but also other elements that serve as links within the specified navigation context */
+    
     color: #000;
   
 }
 
 nav :is(a:hover,a:focus){ /*The :is() CSS pseudo-class function takes a selector list as its argument and selects any element that can be selected by one of the selectors in that list. */
+
+    /* :is(a:hover, a:focus) is selecting a elements when they are either in the hover state (:hover) or have focus (:focus). */
     color:rgb(161, 199, 65);
 }
 
