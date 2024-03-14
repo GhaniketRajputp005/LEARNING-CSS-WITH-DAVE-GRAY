@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* 
+ Css custom variables are a great way to keep your code clean and organized. They allow you to define a value once and use it in multiple places.
+  This way, if you need to change the value, you only need to do it in one place. This is especially useful for colors, font sizes, and other values that are used in multiple places.
+ they are defined using the -- prefix and can be used with the var(--name) function.
+& are kindof global variables. */
+
+/* || RESET */
+
+:root{
+  /* everthing inherits from it */
+
+  /* || COLORS */
+  --BGCOLOR: #475569;
+  --ALT-BGCOLOR: #1e293b;
+  --RADIAL-COLOR: Whitesmoke;
+  --LIGHT-COLOR:whitesmoke;
+  --DARK-COLOR:black;
+  /*Font*/
+  --FF :"Nunito", sans-serif ;
+  /* --FS: min(2.25rem, 3vh); one is absolute and the other is relative */
+
+  --FS: max(1.75rem, 3vh);
+  --FS-XL: 3rem;
+
+  /* The clamp() function is a CSS function that allows you to specify a value within a range, ensuring it stays within specified minimum and maximum values. It takes three parameters:
+
+The minimum value.
+The preferred value.
+The maximum value.
+
+The function then returns the preferred value if it falls within the range specified by the minimum and maximum values. If the preferred value is smaller than the minimum value, it will be set to the minimum value. Likewise, if it's larger than the maximum value, it will be set to the maximum value. */
+
+  /*SQUARES*/
+
+  --SQUARE-BGCOLOR:violet;
+  --SQUARE-SIZE: max(150px,20vw);
+
+  /* GENRAL */
+  --PADDING: .5em;
+  --SHADOWS: 0px 10px 5px -5px var(--DARK-COLOR);
+  --BORDERS: 2px solid var(--DARK-COLOR);
+}
+
+@media (prefers-color-scheme:light) {
+  /* Dark mode */
+  :root {
+    --BGCOLOR: #000000;
+    --ALT-BGCOLOR: #333;
+    --RADIAL-COLOR: gray;
+    --SQUARE-BGCOLOR: rgb(233, 194, 233);
+
+    /* WE ARE OVERWRITING THE PREVIOUS COLOR SCHEMES */
+
+  }
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || GENERAL STYLES */
+body {
+  font: var(--FS) var(--FF);
+  min-height: 100vh;
+
+  background-color: var(--BGCOLOR);
+
+  background-image: radial-gradient(var(--RADIAL-COLOR), var(--BGCOLOR));
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+nav,
+
+footer {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 100%;
+  text-align: center;
+}
+
+header,
+footer {
+  position: sticky;
+  background-color: var(--ALT-BGCOLOR);
+  color: var(--);
+}
+
+header {
+  top: 0;
+}
+
+nav {
+  background-color: var(--LIGHT-COLOR);
+  color: var(--DARK-COLOR);
+  padding: var(--PADDING) ;
+  border-bottom: var(--BORDERS);
+  box-shadow: var(--SHADOWS);
+  /* x offset-x | y offset-y | blur-radius | spread-radius | color */
+  
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap  ;
+  padding: var(--PADDING);
+
+  /* padding: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+  gap:min(4vw, 15px); */
+  /* /it represents the space between the flex items/  */
+
+}
+
+footer {
+  bottom: 0;
+}
+
+
+
+/* || FEATURES*/
+
+
+
+.square{
+  background-color: var(--SQUARE-BGCOLOR);
+  width: var(--SQUARE-SIZE);
+  height:var(--SQUARE-SIZE);
+  border: var(--BORDERS);
+  border-radius: 15px;
+  display: grid;
+  place-content: center;
+  font-size:var(--FS-XL);
+  box-shadow: var(--SHADOWS);
+
+}
+.square--highlight{
+  --SQUARE-BGCOLOR: cornflowerblue;
+}
