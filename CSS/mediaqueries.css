@@ -85,6 +85,13 @@ footer{
 /* we go for min-width as to follow mobile-first approach. */
 
 
+
+
+/* Media queries in CSS are used to apply different styles depending on various factors, such as the device's screen size, orientation, resolution, etc. They allow you to create responsive designs that adapt to different devices and screen sizes */
+
+
+
+
 /* || SMALL */
 
 @media screen and (min-width:576px){
