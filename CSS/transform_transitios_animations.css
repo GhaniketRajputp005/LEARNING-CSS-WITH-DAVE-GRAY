@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 1.5rem;
+    font-family:'Nunito', sans-serif;
+
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column row-reverse;
+}
+
+main{
+    flex-grow:1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items:center;
+    gap:1rem;
+}
+
+div{
+    width:200px;
+    height: 200px;
+    border: 1px solid #000;
+    display: grid;
+    place-content: center;
+}
+
+div:first-child{
+    background-color: dodgerblue;
+
+    /* transform: translateX(50%);  */
+
+    /* transform: translateX(-50%);  */
+    /* transfrom is a property that allows you to move an element in 2D or 3D space */
+    /* here we are moving the element 50% of its width to the right */
+
+    /* translateX is a function that moves an element along the x-axis */
+
+    /* transform: rotateX(180deg); */
+
+    /* rotateX is a function that rotates an element along the x-axis */
+
+    /*element rotates from top and goes back into screen& bottom part comes out */
+
+    /* transform: scaleX(120%); */
+    /* scaleX is a function that expands an element along the x-axis */
+
+    /* transform: skewX(13deg); */
+    /* skewX is a function that skews(theda) an element along the x-axis */
+
+}
+div:nth-child(2){
+    background-color: yellow;
+
+    /* transform: translateY(-2rem); */
+
+    /* transform: rotateY(180deg); */
+
+    /*element rotates from left towards screen and right part back into screen*/
+
+    /* transform: scaleY(120%); */
+    /* scaleY is a function that expands an element along the y-axis */
+
+    /* transform: skewY(-10deg); */
+    /* skewY is a function that skews(theda) an element along the Y-axis */
+}
+div:last-child{
+    background-color: green;
+
+    /* transform: translate(100%, -2rem); */
+    /* translate is a function that moves an element along the x and y axis */
+
+    /* transform: rotateZ(147deg); 
+    or rotate(147deg)*/
+
+    /*element rotates along the z-axis an axis from you to screen */
+
+    /* transform: scale(50%, 50%) ; */
+    /* scale is a function that expands an element along the x and y axis */
+
+    /* transform: skew(-13deg, -13deg);
+    skew is a function that skews an element along the x and y axis */
+
+}
+
+
+/* || transition properties 
+can be applied to properties affected by pseudo classes like hover  
+however , transitions themselves are not exclusive to pseudo- classes and can also be  applied to regular CSS selectors to create smooth animations b/w different states fo an element*/
+
+div:hover{
+    background-color: midnightblue;
+    transition-property:background-color, transform;
+    /* transition-property is a property that specifies the name of the CSS property to which the transition is applied */
+    transition-duration: 2s,3s;
+    transition-delay: .5s;
+
+    transition: all 2s 0.5s;
+    /* all property , duration, delay */
+
+    transition-timing-function: ease;
+    /* transition-timing-function is a property that specifies the speed curve of the transition effect */
+
+    /* ease is a timing function that starts slow, then fast, then ends slow */
+}
+
+div:last-child:hover{
+    transform: rotate(180deg);    
+}
+
+/* || animation properties  */
+
+.animate{
+
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    /* animation-timing-function is a property that specifies the speed curve of the animation effect */
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+    /* animation-iteration-count is a property that specifies the number of times an animation should run */
+
+    /* animation-direction: alternate; */
+    /* animation-direction is a property that specifies whether an animation should play forward, backward, or alternate back and forth */
+
+    animation-fill-mode: forwards;
+
+    /*forwards, backwards, both, none meaning the animation will stay at the last keyframe */
+
+    /* animation-fill-mode is a property that specifies a style for the target element when the animation is not playing */
+
+}
+
+@keyframes slide{
+    /* keyframes is a rule that specifies the animation code */
+    /* after keyframes, we specify the name of the animation */ 
+
+    0%{
+        /* 0% is the starting point of the animation */
+        transform: translateX(0%);
+
+    }
+    33%{
+        /* 33% is the middle point of the animation */
+        transform: translateX(300px) rotate(180deg);
+    }
+    86%{
+        /* 66% is the middle point of the animation */
+        transform: translateX(-300px) rotate(-180deg);
+    }
+    100%{
+        /* 100% is the ending point of the animation */
+        transform: translateX(0%);
+        background-color: rebeccapurple;
+    }
+
+}
