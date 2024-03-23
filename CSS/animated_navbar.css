@@ -83,7 +83,7 @@ header{
 nav{
     background-color: var(--HEADER-BGCOLOR);
     display: none;
-    transform-origin: top center;
+    transform-origin: bottom;
     animation: showmenu 0.5s ease-in-out forwards;
 
 }
