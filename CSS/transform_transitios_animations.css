@@ -121,7 +121,7 @@ div:last-child:hover{
 .animate{
 
     animation-name: slide;
-    animation-duration: 5s;
+    /* animation-duration: 5s; */
     animation-timing-function: ease-in-out;
     /* animation-timing-function is a property that specifies the speed curve of the animation effect */
     animation-delay: 1s;
@@ -146,20 +146,29 @@ div:last-child:hover{
     0%{
         /* 0% is the starting point of the animation */
         transform: translateX(0%);
+        background-color: gold;
 
     }
-    33%{
+    25%{
         /* 33% is the middle point of the animation */
         transform: translateX(300px) rotate(180deg);
+        background-color: pink;
     }
-    86%{
+    50%{
         /* 66% is the middle point of the animation */
-        transform: translateX(-300px) rotate(-180deg);
+        transform: translateY(300px) rotate(-180deg); 
+        /* <!--300px means down on y axis --> */
+        background-color: skyblue;
     }
+    75%{
+        /* 75% is the middle point of the animation */
+        transform: translateY(-300px) rotate(180deg);
+        background-color: cyan;
+    }   
     100%{
         /* 100% is the ending point of the animation */
         transform: translateX(0%);
-        background-color: rebeccapurple;
+        background-color: greenyellow;
     }
 
 }
