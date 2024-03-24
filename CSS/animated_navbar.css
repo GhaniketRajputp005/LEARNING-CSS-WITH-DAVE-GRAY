@@ -1,7 +1,7 @@
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 :root{
@@ -15,9 +15,9 @@ html{
 }
 
 body{
-    min-height: 100vh;
     display: flex;
     flex-flow: column nowrap;
+    min-height: 100vh;
 }
 
 header{
@@ -34,14 +34,14 @@ header{
 
 .menu-button{
 
+    align-items: center;
     background-color: transparent;
     border:none;
-    width:48px;
-    height: 48px;
     display: flex;
+    height: 48px;
     justify-content: center;
-    align-items: center;
     position: relative;
+    width:48px;
 }
 
 .menu-icon, .menu-icon::before, .menu-icon::after{
