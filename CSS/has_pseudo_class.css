@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+
+/* has selector works on descendants of an element in the DOM tree. It selects an element if it has a certain element as a descendant. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --BGCOLOR: lightgray;
+  --COLOR: #000;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: lightslategray;
+}
+
+section {
+  min-height: 100vh;
+  padding: 0.5rem;
+}
+
+button,
+input {
+  font: inherit;
+  border-radius: 10px;
+}
+
+button {
+  padding: 1em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+article {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: wheat;
+}
+
+article p {
+  margin-bottom: 1rem;
+}
+
+/* Example 1 */
+/* Previously we could only select forwards... */
+
+/* article + article{
+     background-color: aliceblue;
+}
+
+article:has(+article) {
+    background-color: rgb(4, 87, 160);
+} */
+
+/* Example 2 */
+/* We can do more thn just select the parent */
+article:has(span) .bold {
+  background-color: darkorange;
+}
+/* this means that article having span having bold class will be  selected */
+
+/* Example 3 */
+/* not has (aka "does not have")  */
+
+article:not(:has(span))
+/* this means that article not having span will be selected */
+{
+  background-color: magenta;
+}
+
+article:has(input, .button){  /* this means that article having input or button will be selected */
+    background-color: rosybrown;
+}
+
+article:has(p):has(.button) {  /* this means that article having p and button will be selected */
+    background-color: rgb(4, 87, 160);
+}
+
+article:has(p):has(.button) p:has(+ .button)/*  this means that article having p and button will be selected and then p having button next to it will be selected */
+{
+        margin-bottom: 4rem;
+}
+
+/* =========================== */
+
+.two {
+  background-color: var(--BGCOLOR);
+  color: var(--COLOR);
+  font-size: 1.5rem;
+}
+
+.nav__menu {
+  max-width: 800px;
+  margin: 0 auto;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.nav__menu > .nav__item:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.nav__menu > .nav__item:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.nav__item {
+  padding: 0.5em 1em;
+  background-color: rebeccapurple;
+  color: #fff;
+  flex-grow: 1;
+  display: grid;
+  place-content: center;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.nav__submenu {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+}
+
+.nav__item:hover {
+  background-color: rgb(123, 63, 182);
+}
+
+.nav__item:hover .nav__submenu {
+  display: block;
+}
+
+.nav__submenu > .nav__item {
+  border-top: 1px solid #fff;
+}
+
+/* Practical Example */
+/* Create fewer modifier classes */
+
+.nav__item:has(.nav__submenu)::after{
+  /* if submenu of list exists it automatically gets applied */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+    content:'\f150';
+    margin-left: 1rem;
+}
+
+
+
+
+
+/* =========================== */
+
+.three,
+.four {
+  background-color: var(--BGCOLOR);
+  color: var(--COLOR);
+  display: grid;
+  place-content: center;
+  font-size: 2rem;
+  position: relative;
+}
+
+input[type="checkbox"] {
+  width: 2rem;
+  height: 2rem;
+}
+
+.awesome {
+  display: block;
+  width: 350px;
+  height: 150px;
+  border: 5px double #000;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: rgb(255, 255, 98);
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 175px);
+}
+
+/* Practical Example(s) - eliminate some JS! */
+
+/* Modal & agree to terms */
+
+.awesome:has(.awesome__terms:checked){
+  display: none;
+}
+
+.three:has(.lightswitch:checked){
+  background-color: var(--COLOR);
+  color:var(--BGCOLOR);
+}
+
+.three:has(.bubbleswitch:checked){
+  background-color: rebeccapurple;
+  background-image:linear-gradient(195deg, dodgerblue, var(--COLOR));
+  
+}
+
+/* label:has(+ .name) 
+adjacent sibling selector */
+
+/* has selector selects parent when it has a certain child */
+
+label:has(~ .name:valid)::after{
+  color: red;
+  content:'✅';
+  margin-left:.5rem ;
+}
+label:has(~ .name:invalid)::after{
+  content:'❌';
+  
+  margin-left:.5rem ;
+}
+
+
+
+/* =========================== */
+
+/* input validation */
