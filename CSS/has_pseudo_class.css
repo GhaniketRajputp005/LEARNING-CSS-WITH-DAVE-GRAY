@@ -229,6 +229,9 @@ adjacent sibling selector */
 
 /* has selector selects parent when it has a certain child */
 
+/* label:has(+ .name) 
+general sibling selector */
+
 label:has(~ .name:valid)::after{
   color: red;
   content:'✅';
