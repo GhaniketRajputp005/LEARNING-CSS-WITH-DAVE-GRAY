@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || RESET */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font: inherit;
+}
+
+/* || VARIABLES */
+
+:root {
+  /* COLORS */
+  --HEADER-BGCOLOR: #333;
+  --HEADER-COLOR: whitesmoke;
+}
+
+/* || UTILITY CLASSES */
+
+.underline {
+  text-decoration: underline;
+}
+
+/* || GENERAL STYLES */
+
+html {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2.5rem;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+ 
+}
+
+/* || BLOCKS */
+/* aka components */
+
+.header{
+    background-color: var(--HEADER-BGCOLOR);
+    color: aliceblue;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 1rem 1rem 0.5rem;
+    
+
+}
+
+
+/* || ELEMENTS */
+.header__btn {
+  border-radius: 15px;
+  min-height: 100px;
+  min-width: 100px;
+  transition: transform 0.3s;
+}
+
+
+
+
+
+/* || B.E.M terminology (block, element, modifiers) */
+
+/* Block (represents a block e.g header, navbar, sidebar etc)
+
+.block {
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+   */
+
+  /* Element (represent smaller components of block)  double underscores are  used
+
+  No standalone meaning - semantically tied to the block
+  does not represent structure , not
+  header__nav__btn
+
+.block__element {
+    color: #333;
+  } */
+
+  
+  /* Modifier  (double dash are used)
+/* incremental classes that modify the block 
+
+.block--modifier {
+    border: 1px solid #ccc;
+  }
+  
+  /* Modifier for Element 
+.block__element--modifier { 
+    font-weight: bold;
+  } */ 
+  
+
+/* || MODIFIERS for block elements*/
+
+.header__btn--secondary{
+    background-color: yellow;
+}
+
+.header__btn--lean{
+    transform: skewX(-15deg);
+}
+
+.header__btn-border-lg{
+    border: 5px solid whitesmoke;
+}
